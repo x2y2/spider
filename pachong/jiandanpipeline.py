@@ -21,7 +21,7 @@ class JiandanPipeline(object):
       file_name = list_name[len(list_name) - 1]
       file_path = os.path.join(dir_path,file_name)
       print 'filepath: ',file_path
-      if os.path.exists(file_name):
+      if os.path.exists(file_path):
         continue
       with open(file_path,'wb') as fp:
         conn = urllib.urlopen(image_url)

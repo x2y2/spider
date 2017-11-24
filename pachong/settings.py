@@ -43,7 +43,7 @@ COOKIES_ENABLED = True
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
 #}
-
+FEED_EXPORT_ENCODING = 'utf-8'
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
@@ -64,12 +64,16 @@ COOKIES_ENABLED = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
+#ITEM_PIPELINES = {
+#    'pachong.jiandanpipeline.JiandanPipeline': 1,
+#}
 ITEM_PIPELINES = {
-    'pachong.jiandanpipeline.JiandanPipeline': 1,
+     'pachong.jiandanpipeline.JiandanPipeline': 1,
 }
 
+
 IMAGES_STORE = '/tmp/jiandan'
-DOWNLOAD_DELAY = 0.25
+DOWNLOAD_DELAY = 1
 IMAGES_THUMBS = {
 	"small": (50,50),
 	"big": (200,200),
@@ -101,4 +105,4 @@ os.environ["DISPLAY"] = ":0"
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-DEPTH_LIMIT=20
+#DEPTH_LIMIT=100
